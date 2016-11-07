@@ -32,7 +32,7 @@ public class TrackApplication {
 	public DataSource dataSource() throws IOException {
 		Properties dsProps = PropertiesLoaderUtils.loadAllProperties("datasource.properties");
 		Properties hikariProps = PropertiesLoaderUtils.loadAllProperties("hikari.properties");
-		hikariProps.put("dataSourceProperties", dsProps);;
+		hikariProps.put("dataSourceProperties", dsProps);
 		return new HikariDataSource(new HikariConfig(hikariProps));
 	}
 
